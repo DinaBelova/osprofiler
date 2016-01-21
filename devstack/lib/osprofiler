@@ -64,6 +64,9 @@ function configure_osprofiler() {
             iniset $conf profiler hmac_keys SECRET_KEY
         fi
     done
+    CEILOMETER_CONF_DIR=/etc/ceilometer
+    CEILOMETER_CONF=$CEILOMETER_CONF_DIR/ceilometer.conf
+    iniset $CEILOMETER_CONF event store_raw info
 }
 
 
